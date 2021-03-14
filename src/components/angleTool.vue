@@ -166,8 +166,7 @@ export default {
         'border-width':`${borderWidth}`,
         'border-color':`${dirction}`
       };
-
-      showStr.value = JSON.stringify(obj,null,4).replaceAll(/"/g, '').replaceAll(/,/g, ';');
+      showStr.value = JSON.stringify(obj,null,4).replaceAll(/"/g, '').replaceAll(/,\n/g, ';\n');
     }
     function handleChange(row, item) {
       getChange();
