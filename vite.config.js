@@ -2,13 +2,17 @@ import {
   defineConfig
 } from 'vite'
 import vue from '@vitejs/plugin-vue'
-const { resolve } = require('path')
+const {
+  resolve
+} = require('path')
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   base: "/",
-  publicDir: "/",
+  build:{
+    outDir:"static_src"
+  },
   server: {
     port: '9999',
     open: true,
@@ -17,8 +21,8 @@ export default defineConfig({
   resolve: {
     extensions: [".js", ".vue", ".json", ".ts", ".tsx", ".vue"],
     alias: {
-        '@': resolve(__dirname, './src'),
-        '@components': resolve(__dirname, './src/components')
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components')
     }
-},
+  },
 })
