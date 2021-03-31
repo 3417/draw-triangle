@@ -186,9 +186,9 @@ export default {
 
 <style lang="scss" scoped>
 .common_box {
-  width: 38%;
+  width: 60%;
   display: flex;
-  margin: 60px auto 0;
+  margin: pxTorem(60px) auto 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -201,7 +201,7 @@ export default {
 }
 
 .angle-container {
-  height: 450px;
+  height: pxTorem(350px);
   background-color: #fafafa;
   @extend .common_box;
   .angle-left,
@@ -261,8 +261,8 @@ export default {
 
 .angle-context {
   @extend .common_box, .white;
-  height: 260px;
-  top: 456px;
+  height: pxTorem(180px);
+  top: pxTorem(356px);
   display: block;
   h2 {
     padding: 10px;
@@ -275,7 +275,7 @@ export default {
     overflow: auto;
     white-space: pre-wrap;
     color: rgba(0,0,0,.7);
-    height: calc(100% - 50px);
+    height: calc(100% - pxTorem(50px));
     &::-webkit-scrollbar {
       width: 8px;
       height: 8px;
