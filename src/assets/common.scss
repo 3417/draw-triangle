@@ -1,0 +1,4 @@
+@function pxTorem($px){
+    $rem: 37.5px;
+    @return ($px / $rem) + rem;
+  }
